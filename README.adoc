@@ -1,0 +1,35 @@
+= README
+
+SSH Client
+
+Docker Client
+Docker Machine
+Docker for Mac, Docker for Windows
+
+
+== Setup
+
+For participating in the workshop you are required to have a Docker host operated by a cloud provider of your choice.
+
+If no cloud provider account exists, I'm recommending Digital Ocean as it is very simmple.
+Using this https://m.do.co/c/e30a2ecd1271[referral link] you are credited 10$ which is sufficient for the workshop.
+
+The host should run a Docker engine (1.13 is latest as of today) and you should be able to either connect to this host via SSH or using `docker-machine`.
+Further the host must have `git` and `docker-compose`.
+
+
+.Installing git with the debian package manager
+[source,shell]
+----
+apt-get update -y
+apt-get install -y git
+----
+
+
+.Installing docker-compose
+[source,shell]
+----
+curl -L "https://github.com/docker/compose/releases/download/1.10.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose && chmod +x /usr/local/bin/docker-compose
+----
+
+
